@@ -133,7 +133,7 @@ export class ShellyPlus1Client {
     const body: Record<string, unknown> = {
       id: this.rpcId++,
       method,
-      src: 'homebridge-shelly-plus1-doorbell',
+      src: 'rhouse-shelly-plus1-doorbell',
     };
     if (params !== undefined) {
       body.params = params;

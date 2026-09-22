@@ -1,0 +1,83 @@
+{
+  "pluginAlias": "ShellyPlus1Doorbell",
+  "pluginType": "platform",
+  "singular": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Platform Name",
+        "type": "string",
+        "default": "Shelly Plus 1 Doorbell",
+        "required": true
+      },
+      "homebridgeIp": {
+        "title": "Homebridge IP",
+        "type": "string",
+        "description": "LAN IP of the machine running Homebridge. The Shelly must be able to reach this address for doorbell webhooks.",
+        "required": true,
+        "placeholder": "192.168.1.10"
+      },
+      "doorbells": {
+        "title": "Doorbells",
+        "type": "array",
+        "required": true,
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Name",
+              "type": "string",
+              "default": "Doorbell",
+              "required": true
+            },
+            "shellyIp": {
+              "title": "Shelly Plus 1 IP",
+              "type": "string",
+              "required": true,
+              "placeholder": "192.168.1.50"
+            },
+            "webhookPort": {
+              "title": "Webhook Port",
+              "type": "integer",
+              "default": 9053,
+              "minimum": 1024,
+              "maximum": 65535,
+              "description": "Local HTTP port the plugin listens on. Must be unique per doorbell and reachable from the Shelly.",
+              "required": true
+            },
+            "shellyUsername": {
+              "title": "Shelly Username",
+              "type": "string",
+              "default": "admin",
+              "description": "Always \"admin\" on Gen2 devices when authentication is enabled."
+            },
+            "shellyPassword": {
+              "title": "Shelly Password",
+              "type": "string",
+              "description": "Leave empty if authentication is disabled on the Shelly."
+            },
+            "digitalDoorbellName": {
+              "title": "Digital Gong Name",
+              "type": "string",
+              "default": "Digital gong"
+            },
+            "mechanicalDoorbellName": {
+              "title": "Mechanical Gong Name",
+              "type": "string",
+              "default": "Mechanical gong"
+            },
+            "autoOffDelay": {
+              "title": "Relay Auto-Off Delay (seconds)",
+              "type": "number",
+              "default": 0.2,
+              "minimum": 0.1,
+              "maximum": 5,
+              "description": "How long the relay stays closed so the mechanical gong can sound."
+            }
+          }
+        }
+      }
+    }
+  }
+}

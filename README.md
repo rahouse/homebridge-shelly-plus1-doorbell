@@ -1,4 +1,4 @@
-# @rhouse/homebridge-shelly-plus1-doorbell
+# homebridge-plus1-doorbell
 
 Homebridge plugin that turns a [Shelly Plus 1](https://www.shelly.com/products/shelly-plus-1) wired to a classic two-wire doorbell into a HomeKit doorbell with:
 
@@ -44,7 +44,7 @@ Also:
 Search for **Shelly Plus 1 Doorbell** in the Homebridge UI, or:
 
 ```bash
-hb-service add @rhouse/homebridge-shelly-plus1-doorbell
+hb-service add homebridge-plus1-doorbell
 ```
 
 Restart Homebridge after install.

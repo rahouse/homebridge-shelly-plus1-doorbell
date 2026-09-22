@@ -1,5 +1,5 @@
 {
-  "name": "@rhouse/homebridge-shelly-plus1-doorbell",
+  "name": "homebridge-plus1-doorbell",
   "displayName": "Shelly Plus 1 Doorbell",
   "version": "1.0.0",
   "description": "Homebridge plugin: Shelly Plus 1 as a HomeKit doorbell with independent digital and mechanical gong controls",
